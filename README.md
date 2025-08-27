@@ -1,8 +1,15 @@
 # Lox Interpreter
 
-<img width="851" height="756" alt="Screenshot 2025-08-27 at 9 48 13 PM" src="https://github.com/user-attachments/assets/da33878b-25f2-498f-9c54-b74f65795819" />
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/da33878b-25f2-498f-9c54-b74f65795819" 
+    alt="Screenshot 2025-08-27 at 9 48 13 PM" 
+    width="851" height="756"
+    style="border: 2px solid #ddd; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);" 
+  />
+</p>
 
-A complete implementation of the Lox programming language interpreter following "Crafting Interpreters" by Robert Nystrom.
+A complete implementation of the Lox programming language interpreter following # [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom.
 
 ## Features Implemented
 
