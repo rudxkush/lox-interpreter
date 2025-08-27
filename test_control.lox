@@ -1,0 +1,16 @@
+var a = 1;
+if (a > 0) {
+  print "positive";
+} else {
+  print "not positive";
+}
+
+var i = 0;
+while (i < 3) {
+  print i;
+  i = i + 1;
+}
+
+for (var j = 0; j < 3; j = j + 1) {
+  print "loop " + j;
+}

@@ -1,0 +1,9 @@
+// Performance benchmark
+fun fibonacci(n) {
+  if (n < 2) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+print "Computing fibonacci(25)...";
+var result = fibonacci(25);
+print "Result: " + result;

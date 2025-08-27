@@ -1,0 +1,71 @@
+// Class definition and inheritance example
+class Animal {
+  init(name, species) {
+    this.name = name;
+    this.species = species;
+  }
+  
+  speak() {
+    print this.name + " the " + this.species + " makes a sound";
+  }
+  
+  info() {
+    print "Name: " + this.name;
+    print "Species: " + this.species;
+  }
+}
+
+class Dog < Animal {
+  init(name, breed) {
+    super.init(name, "dog");
+    this.breed = breed;
+  }
+  
+  speak() {
+    print this.name + " barks!";
+  }
+  
+  wagTail() {
+    print this.name + " wags its tail happily!";
+  }
+  
+  info() {
+    super.info();
+    print "Breed: " + this.breed;
+  }
+}
+
+class Cat < Animal {
+  init(name) {
+    super.init(name, "cat");
+  }
+  
+  speak() {
+    print this.name + " meows!";
+  }
+  
+  purr() {
+    print this.name + " purrs contentedly.";
+  }
+}
+
+// Create instances
+var dog = Dog("Rex", "Golden Retriever");
+var cat = Cat("Whiskers");
+
+// Test methods
+dog.speak();
+dog.wagTail();
+dog.info();
+
+print "";
+
+cat.speak();
+cat.purr();
+cat.info();
+
+// Polymorphism
+var animals = [dog, cat];
+for (var i = 0; i < 2; i = i + 1) {
+  animals[i].speak();
+}

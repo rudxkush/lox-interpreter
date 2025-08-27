@@ -1,0 +1,20 @@
+# Build artifacts
+obj/
+lox
+*.o
+
+# Temporary files
+*.tmp
+temp.lox
+server.log
+nohup.out
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

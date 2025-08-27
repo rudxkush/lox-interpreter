@@ -1,0 +1,91 @@
+// Lox Language Demo - Complete Implementation
+
+print "=== LOX INTERPRETER DEMO ===";
+print "";
+
+// 1. Basic expressions and literals
+print "1. Basic Expressions:";
+print 42;
+print "Hello, World!";
+print true;
+print nil;
+print 3 + 4 * 2;
+print "Concat" + " " + "strings";
+print "";
+
+// 2. Variables and scoping
+print "2. Variables & Scoping:";
+var global = "I'm global";
+{
+  var local = "I'm local";
+  print global;
+  print local;
+  {
+    var inner = "I'm inner";
+    print inner;
+  }
+}
+print global;
+print "";
+
+// 3. Control flow
+print "3. Control Flow:";
+var x = 10;
+if (x > 5) {
+  print "x is greater than 5";
+} else {
+  print "x is not greater than 5";
+}
+
+var i = 0;
+while (i < 3) {
+  print "Loop iteration: " + i;
+  i = i + 1;
+}
+print "";
+
+// 4. Functions and recursion
+print "4. Functions & Recursion:";
+
+fun greet(name) {
+  return "Hello, " + name + "!";
+}
+
+fun factorial(n) {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+
+fun fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+print greet("Lox");
+print "5! = " + factorial(5);
+print "fib(8) = " + fibonacci(8);
+print "";
+
+// 5. Closures
+print "5. Closures:";
+
+fun makeCounter() {
+  var count = 0;
+  fun counter() {
+    count = count + 1;
+    return count;
+  }
+  return counter;
+}
+
+var counter1 = makeCounter();
+var counter2 = makeCounter();
+
+print "Counter1: " + counter1();
+print "Counter1: " + counter1();
+print "Counter2: " + counter2();
+print "Counter1: " + counter1();
+print "";
+
+print "=== DEMO COMPLETE ===";
+print "Lox interpreter successfully running!";

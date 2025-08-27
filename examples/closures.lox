@@ -1,0 +1,63 @@
+// Closures and lexical scoping examples
+
+// Counter closure
+fun makeCounter() {
+  var i = 0;
+  fun count() {
+    i = i + 1;
+    return i;
+  }
+  return count;
+}
+
+var counter1 = makeCounter();
+var counter2 = makeCounter();
+
+print counter1(); // 1
+print counter1(); // 2
+print counter2(); // 1
+print counter1(); // 3
+
+// Adder closure
+fun makeAdder(x) {
+  fun add(y) {
+    return x + y;
+  }
+  return add;
+}
+
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
+
+print add5(3); // 8
+print add10(3); // 13
+
+// Multiplier table
+fun makeMultiplier(factor) {
+  fun multiply(n) {
+    return n * factor;
+  }
+  return multiply;
+}
+
+var double = makeMultiplier(2);
+var triple = makeMultiplier(3);
+
+for (var i = 1; i <= 5; i = i + 1) {
+  print "Double " + i + " = " + double(i);
+  print "Triple " + i + " = " + triple(i);
+}
+
+// Nested closures
+fun outer(x) {
+  fun middle(y) {
+    fun inner(z) {
+      return x + y + z;
+    }
+    return inner;
+  }
+  return middle;
+}
+
+var result = outer(1)(2)(3);
+print "Nested closure result: " + result; // 6
