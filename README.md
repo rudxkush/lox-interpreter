@@ -1,5 +1,7 @@
 # Lox Interpreter
 
+<img width="851" height="756" alt="Screenshot 2025-08-27 at 9 48 13 PM" src="https://github.com/user-attachments/assets/da33878b-25f2-498f-9c54-b74f65795819" />
+
 A complete implementation of the Lox programming language interpreter following "Crafting Interpreters" by Robert Nystrom.
 
 ## Features Implemented
