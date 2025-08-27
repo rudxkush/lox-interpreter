@@ -9,7 +9,7 @@
   />
 </p>
 
-A complete implementation of the Lox programming language interpreter following # [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom.
+A complete implementation of the Lox programming language interpreter following [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom.
 
 ## Features Implemented
 
